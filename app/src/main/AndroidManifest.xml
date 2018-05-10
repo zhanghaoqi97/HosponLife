@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="main.hosponlife.cyberway.net.cn.hosponlife">
+
+    <application
+        android:name="com.hopson.hopsonlife.base.HopsonApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/logo"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/logo"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name="com.hopson.hopsonlife.ui.SplashActivity"
+            android:theme="@style/AppTheme.Simple" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name="com.hopson.hopsonlife.ui.MainActivity"/>
+        <activity android:name="com.hopson.hopsonlife.ui.LoginActivity"/>
+    </application>
+
+</manifest>
