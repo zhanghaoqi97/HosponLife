@@ -1,15 +1,35 @@
 package com.hopson.hopsonlife.ui;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+
+import com.hopson.hopsonlife.base.BaseActivity;
 
 import main.hosponlife.cyberway.net.cn.hosponlife.R;
 
-public class LoginActivity extends AppCompatActivity {
+public class LoginActivity extends BaseActivity {
+
+
+
+
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+    public int getLayoutId() {
+        return R.layout.activity_login;
+    }
+
+    @Override
+    public void initData(Bundle savedInstanceState) {
+
+    }
+
+    @Override
+    public void initView() {
+
+    }
+
+
+    public void login(View view) {
+        openActivity(MainActivity.class);
     }
 }

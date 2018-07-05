@@ -12,16 +12,17 @@
         android:theme="@style/AppTheme">
         <activity
             android:name="com.hopson.hopsonlife.ui.SplashActivity"
-            android:theme="@style/AppTheme.Simple" >
+            android:theme="@style/AppTheme.Simple">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity android:name="com.hopson.hopsonlife.ui.MainActivity"/>
-        <activity android:name="com.hopson.hopsonlife.ui.LoginActivity"/>
+        <activity android:name="com.hopson.hopsonlife.ui.MainActivity" />
+        <activity android:name="com.hopson.hopsonlife.ui.LoginActivity" />
+        <activity android:name="com.hopson.hopsonlife.ui.GuidePageActivity" />
+        <activity android:name="com.hopson.hopsonlife.ui.me.SettingActivity"></activity>
     </application>
 
 </manifest>

@@ -2,6 +2,8 @@ package com.hopson.hopsonlife.base;
 
 import android.app.Application;
 
+import com.youth.xframe.XFrame;
+
 /**
  * 项目名称: HopsonLife
  * 创建人：Zhq
@@ -16,6 +18,6 @@ public class HopsonApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-
+        XFrame.init(this);
     }
 }

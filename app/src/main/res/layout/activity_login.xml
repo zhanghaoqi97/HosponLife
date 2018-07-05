@@ -6,6 +6,11 @@
     android:layout_height="match_parent"
     tools:context="com.hopson.hopsonlife.ui.LoginActivity">
 
-
+<TextView
+    android:id="@+id/login"
+    android:layout_width="match_parent"
+    android:text="登录"
+    android:onClick="login"
+    android:layout_height="wrap_content" />
 
 </LinearLayout>
