@@ -3,7 +3,7 @@
     package="main.hosponlife.cyberway.net.cn.hosponlife">
 
     <application
-        android:name="com.hopson.hopsonlife.base.HopsonApplication"
+        android:name="com.hopson.hopsonlife.base.HopsonStewardApp"
         android:allowBackup="true"
         android:icon="@mipmap/logo"
         android:label="@string/app_name"

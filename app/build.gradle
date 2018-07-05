@@ -5,22 +5,49 @@ android {
     buildToolsVersion "26.0.2"
     defaultConfig {
         applicationId "main.hosponlife.cyberway.net.cn.hosponlife"
-        minSdkVersion 16
+        minSdkVersion 19
         targetSdkVersion 26
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
+
     buildTypes {
         release {
+            zipAlignEnabled true
+            shrinkResources false
+            buildConfigField("boolean", "LOG_DEBUG", "false")
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            zipAlignEnabled true
+            shrinkResources false
+            buildConfigField("boolean", "LOG_DEBUG", "true")
+            debuggable true
+            jniDebuggable true
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
     allprojects {
         repositories {
             maven { url "https://jitpack.io" }
         }
+    }
+
+    dexOptions {
+        javaMaxHeapSize "8g"
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
     }
 }
 
@@ -29,11 +56,35 @@ dependencies {
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
+    //noinspection GradleCompatible
     implementation 'com.android.support:appcompat-v7:26.0.0-beta1'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     testCompile 'junit:junit:4.12'
-    implementation project(':xframe')
     implementation 'com.android.support:recyclerview-v7:26.0.0-beta1'
+    implementation project(':xframe')
+    //TODO 辅助工具
     compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.30'
-    compile 'com.github.lzyzsd:jsbridge:1.0.4'
+    //TODO 万能适配器
+    implementation 'com.squareup.okhttp3:okhttp:3.10.0'
+    compile 'com.squareup.okhttp3:logging-interceptor:3.4.1'
+    //TODO okhttp的log信息
+    compile 'com.lcodecorex:tkrefreshlayout:1.0.7'
+    //TODO 下拉刷新库
+    implementation 'io.reactivex.rxjava2:rxjava:2.x.x'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.0.2'
+    compile 'com.squareup.retrofit2:retrofit:2.0.0-beta4'
+    compile 'com.squareup.retrofit2:converter-gson:2.0.0-beta4'
+    compile 'com.squareup.retrofit2:adapter-rxjava:2.0.0-beta4'
+    //TODO 注解
+    compile 'com.jakewharton:butterknife:8.4.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.4.0'
+    //TODO TabLayout
+    implementation 'com.android.support:support-v4:26.0.0-beta1'
+    compile 'com.nineoldandroids:library:2.4.0'
+    compile 'com.flyco.roundview:FlycoRoundView_Lib:1.0.4@aar'
+    compile 'com.flyco.tablayout:FlycoTabLayout_Lib:1.3.4@aar'
+    //TODO 内存泄漏
+    debugCompile 'com.squareup.leakcanary:leakcanary-android:1.5'
+    releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5'
+    testCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5'
 }

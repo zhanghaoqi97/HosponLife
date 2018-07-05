@@ -1,15 +1,14 @@
 package com.youth.xframe.base;
 
-import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
-import android.support.v7.app.AppCompatActivity;
 
+import com.trello.rxlifecycle.components.support.RxAppCompatActivity;
 import com.youth.xframe.common.XActivityStack;
 import com.youth.xframe.utils.permission.XPermission;
 
 
-public abstract class XActivity extends AppCompatActivity implements ICallback {
+public abstract class XActivity extends RxAppCompatActivity implements ICallback {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

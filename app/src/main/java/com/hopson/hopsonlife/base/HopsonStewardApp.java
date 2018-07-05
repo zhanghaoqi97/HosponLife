@@ -2,6 +2,7 @@ package com.hopson.hopsonlife.base;
 
 import android.app.Application;
 
+import com.squareup.leakcanary.LeakCanary;
 import com.youth.xframe.XFrame;
 
 /**
@@ -13,11 +14,22 @@ import com.youth.xframe.XFrame;
  * 修改备注:
  */
 
-public class HopsonApplication extends Application {
+public class HopsonStewardApp extends Application {
+    public static HopsonStewardApp mInstance;
 
     @Override
     public void onCreate() {
         super.onCreate();
+        //初始化Leak内存泄露检测工具
+        LeakCanary.install(this);
         XFrame.init(this);
+        mInstance = this;
     }
+
+
+    public static HopsonStewardApp getInstance() {
+        return mInstance;
+    }
+
+
 }
