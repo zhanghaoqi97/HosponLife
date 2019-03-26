@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/HosponLife.iml" filepath="$PROJECT_DIR$/HosponLife.iml" />
+      <module fileurl="file://C:\Users\Guoshiyuan\Desktop\Project\HosponLife.iml" filepath="C:\Users\Guoshiyuan\Desktop\Project\HosponLife.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Project.iml" filepath="$PROJECT_DIR$/Project.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://C:\Users\Guoshiyuan\Desktop\Project\app\app.iml" filepath="C:\Users\Guoshiyuan\Desktop\Project\app\app.iml" />
       <module fileurl="file://$PROJECT_DIR$/xframe/xframe.iml" filepath="$PROJECT_DIR$/xframe/xframe.iml" />
+      <module fileurl="file://C:\Users\Guoshiyuan\Desktop\Project\xframe\xframe.iml" filepath="C:\Users\Guoshiyuan\Desktop\Project\xframe\xframe.iml" />
     </modules>
   </component>
 </project>
